@@ -1,0 +1,178 @@
+img {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.removed {
+    display: none;
+  }
+  
+  .invisible {
+    opacity: 0.2;
+  }
+  
+  .camView {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px auto;
+    cursor: pointer;
+  }
+  
+  .camView p {
+    position: absolute;
+    padding: 5px;
+    background-color: rgba(255, 111, 0, 0.85);
+    color: #FFF;
+    border: 1px dashed rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+  
+  .highlighter {
+    align-content: center;
+    background: rgba(0, 255, 0, 0.25);
+    border: 1px dashed #fff;
+    z-index: 1;
+    position: absolute;
+  }
+
+  h1 {
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 62px;
+    letter-spacing: -0.5px;
+    color: white;
+    margin: 0;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  p {
+    text-align: center;
+    color: white;
+  }
+
+  .camContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+body {
+  background-color: rgb(32, 31, 31);
+  overflow-x: scroll;
+}
+
+.middle {
+  max-width: 33%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-container {
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.webcamButton {
+  border: none;
+  max-width: 25%;
+  border-radius: 2px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.dropbtn {
+  background-color: #ffffff;
+  border-radius: 2px;
+  margin: 0 auto;
+  color: black;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #f0e7e7;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  right: 100%;
+  margin-right: 140px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  max-height: 500px;
+  overflow: scroll;
+  overflow-x:hidden;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content span {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown span:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.webcam-and-dropdown {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+}
+
+.current-filtered-items {
+  position: absolute;
+  right: 100%;
+  margin-right: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  border-radius: 20px;
+  width: 150px;
+  height: 20px;
+  background: white;
+  padding: 15px 5px;
+}
+
+.tag-text {
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.x-svg {
+  filter: invert(55%) sepia(94%) saturate(7438%) hue-rotate(350deg) brightness(94%) contrast(138%);
+  cursor: pointer;
+  margin-left: auto;
+}
