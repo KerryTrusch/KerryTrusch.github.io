@@ -91,7 +91,7 @@ body {
   border-radius: 2px;
   margin: 0 auto;
   color: black;
-  padding: 12px;
+  padding: 12px 36px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -116,8 +116,8 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
-  right: 100%;
-  margin-right: 140px;
+  margin-top: 20px;
+  margin-right: auto;
 }
 
 .dropdown-content {
@@ -150,9 +150,6 @@ body {
 }
 
 .current-filtered-items {
-  position: absolute;
-  right: 100%;
-  margin-right: 250px;
   display: flex;
   flex-direction: column;
 }

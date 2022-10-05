@@ -13,31 +13,32 @@
     
     <section id="demos" class="invisible">
       <div class="text-container">
-        <p class="middle">Hold some objects up close to your webcam to get a real-time classification! When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+        <p class="middle">Select some objects to be tagged from the dropdown below, and then hold them up to the camera! When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
       </div>
       <div class="camContainer">
         <div id="liveView" class="camView">
           <div class="webcam-and-dropdown" id="tempLive">
-            <div style="position: absolute;">
-              <div style="display: flex; flex-direction: column;">
+            <video id="webcam" autoplay muted width="640" height="480"></video>          
+          </div>
+          <button id="webcamButton" class="webcamButton">Enable Webcam</button>
+          <div style="display: flex; flex-direction:column; max-width: 640px;">
+            <span style="color:white; width:75%; text-align: center; margin: 10px auto;"> Want a text notification if your object has been found (maybe you dont want your dog on your bed)? Input your phone number below. You will only recieve one text message per day due to rate limits. </span>
+            <span style="color:red; display: none;" id="errorText"> Improperly formatted number. Ensure there are no dashes or non-digit characters. </span>
+            <input placeholder="*** *** ****" style="border: none; border-radius:2px; padding: 4px; width: 25%; margin:10px auto;" id="number"/>
+            <button class="webcamButton" id="phoneButton" onclick="saveNumber()"> Submit phone number </button>
+            <div style="display: flex;">
+              <div style="margin-right: auto; margin-left: 20px;">
                 <div class="dropdown">
                   <button onclick="showDropdown()" class="dropbtn"><div style="display: flex;">Add Item <img style="width: 25%; height:25%; margin: auto 0;" src="down-svg.svg"/></div> </button>
                   <div id="myDropdown" class="dropdown-content">
                     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                   </div>
                 </div>
-                <div class="current-filtered-items" id="current-filtered-items">
-                </div>
+              </div>
+              <div style="margin-left: auto; margin-right: 20px;">
+                <div class="current-filtered-items" id="current-filtered-items"></div>
               </div>
             </div>
-            <video id="webcam" autoplay muted width="640" height="480"></video>          
-          </div>
-          <button id="webcamButton" class="webcamButton">Enable Webcam</button>
-          <div style="display: flex; flex-direction:column;">
-            <span style="color:white; width:50%; text-align: center; margin: 10px auto;"> Want a text notification if your object has been found (maybe you dont want your dog on your bed)? Input your phone number below. You will only recieve one text message per day due to rate limits. </span>
-            <span style="color:red; display: none;" id="errorText"> Improperly formatted number. Ensure there are no dashes or non-digit characters. </span>
-            <input placeholder="*** *** ****" style="border: none; border-radius:2px; padding: 4px; width: 25%; margin:10px auto;" id="number"/>
-            <button class="webcamButton" id="phoneButton" onclick="saveNumber()"> Submit phone number </button>
           </div>
         </div>
       </div>
